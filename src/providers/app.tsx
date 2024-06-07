@@ -1,5 +1,5 @@
 import React from 'react'
-import { BrowserRouter as Router } from 'react-router-dom'
+import {BrowserRouter as Router, HashRouter} from 'react-router-dom'
 
 import { Spinner } from '@/components/Elements/Spinner/Spinner'
 import { queryClient } from '@/lib/react-query'
@@ -19,7 +19,8 @@ export const AppProvider = ({ children }: AppProviderProps) => {
       }
     >
       <QueryClientProvider client={queryClient}>
-        <Router>{children}</Router>
+
+        <HashRouter>{children}</HashRouter>
       </QueryClientProvider>
     </React.Suspense>
   )
