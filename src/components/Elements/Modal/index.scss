@@ -1,0 +1,24 @@
+// я хотел спать сорьке <3
+.modal {
+  &Wrapper {
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    bottom: 0;
+    z-index: 4444;
+    background-color: rgba(126, 124, 124, 0.28);
+    backdrop-filter: blur(5px);
+  }
+  &Body {
+    background-color: #F9FAFB;
+    padding: 1rem;
+    border-radius: 1rem;
+    max-width: 526px;
+    width: 100%;
+  }
+}
