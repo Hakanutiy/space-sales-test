@@ -2,14 +2,14 @@
 @tailwind components;
 @tailwind utilities;
 @font-face {
-    font-family: 'FuturaPT';
-    src: url('./fonts/FuturaPT-Medium.woff2') format('woff2');
+  font-family: 'FuturaPT';
+  src: url('./fonts/FuturaPT-Medium.woff2') format('woff2');
 }
 
 body {
-    background-color: #EBEBF0;
-    font-family: 'FuturaPT', sans-serif;
+  background-color: #ebebf0;
+  font-family: 'FuturaPT', sans-serif;
 }
 #menu-toggle:checked ~ #menu {
-    display: block;
+  display: block;
 }

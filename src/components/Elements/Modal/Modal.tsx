@@ -2,7 +2,7 @@ import { FC, ReactElement, useEffect, useRef } from 'react'
 
 import { OnEscKeyPressedDoCallback } from '@/utils/keyCodePressed'
 
-import  './index.scss'
+import './index.scss'
 
 export interface ModalProps {
   onClose?: () => void
@@ -43,7 +43,8 @@ export const Modal: FC<ModalProps> = ({ onClose, onOpen, children }) => {
       role="button"
       onKeyDown={onEscape}
       tabIndex={0}
-      className={'modalWrapper'}>
+      className={'modalWrapper'}
+    >
       <div className={'modalBody'}>{children}</div>
     </div>
   )

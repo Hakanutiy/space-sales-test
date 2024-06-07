@@ -3,7 +3,7 @@ import { FC } from 'react'
 import { useUiStore } from '@/stores/ui'
 
 import { Modal, ModalProps } from './Modal'
-import {Portal} from "@/components/Elements/Portal";
+import { Portal } from '@/components/Elements/Portal'
 
 export const MainModal: FC<ModalProps> = ({ onClose, modalId, ...props }) => {
   const { currentModalId, clearCurrentModal } = useUiStore()

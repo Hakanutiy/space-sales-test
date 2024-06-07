@@ -1,15 +1,14 @@
 export interface sendCreateTeam {
-    email: string
-    permissions: string[]
-    name: string
+  email: string
+  permissions: string[]
+  name: string
 }
 
-
 export interface DeleteTeamUser {
-    id: string
+  id: string
 }
 
 export interface EditTeamUser {
-    id: string
-    permissions: string[]
+  id: string
+  permissions: string[]
 }

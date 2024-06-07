@@ -16,17 +16,17 @@ const queryConfig: DefaultOptions = {
 export const queryClient = new QueryClient({ defaultOptions: queryConfig })
 
 export type ExtractFnReturnType<FnType extends (...args: any) => any> = PromiseValue<
-    ReturnType<FnType>
+  ReturnType<FnType>
 >
 
 export type MutationConfig<MutationFnType extends (...args: any) => any> =
-    UseMutationOptions<
-        ExtractFnReturnType<MutationFnType>,
-        any,
-        Parameters<MutationFnType>[0]
-    >
+  UseMutationOptions<
+    ExtractFnReturnType<MutationFnType>,
+    any,
+    Parameters<MutationFnType>[0]
+  >
 
 export type QueryConfig<QueryFnType extends (...args: any) => any> = Omit<
-    UseQueryOptions<ExtractFnReturnType<QueryFnType>>,
-    'queryKey' | 'queryFn'
+  UseQueryOptions<ExtractFnReturnType<QueryFnType>>,
+  'queryKey' | 'queryFn'
 >
