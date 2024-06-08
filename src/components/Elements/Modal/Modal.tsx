@@ -2,7 +2,6 @@ import { FC, ReactElement, useEffect, useRef } from 'react'
 
 import { OnEscKeyPressedDoCallback } from '@/utils/keyCodePressed'
 
-import './index.scss'
 
 export interface ModalProps {
   onClose?: () => void
