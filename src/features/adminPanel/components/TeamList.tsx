@@ -75,4 +75,5 @@ export const TeamList = ({ data }) => {
       </>
     )
   else if (data.isPending) return <Spinner />
+  else return (<p>Данных нет</p>)
 }
