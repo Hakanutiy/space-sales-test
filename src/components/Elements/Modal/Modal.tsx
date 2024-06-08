@@ -43,9 +43,9 @@ export const Modal: FC<ModalProps> = ({ onClose, onOpen, children }) => {
       role="button"
       onKeyDown={onEscape}
       tabIndex={0}
-      className={'modalWrapper'}
+      className={'fixed inset-0 flex items-center justify-center z-[4444] bg-[rgba(126,124,124,0.28)] backdrop-blur'}
     >
-      <div className={'modalBody'}>{children}</div>
+      <div className={'bg-[#f9fafb] p-4 rounded-[1rem] max-w-[526px] w-full'}>{children}</div>
     </div>
   )
 }

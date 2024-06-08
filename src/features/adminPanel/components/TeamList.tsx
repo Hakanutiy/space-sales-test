@@ -36,9 +36,9 @@ export const TeamList = ({ data }) => {
             />
             <main className={'w-full flex flex-col justify-center'}>
               <div className={'flex justify-between items-center'}>
-                <div className={'flex flex-col md:flex-row md:gap-2'}>
-                  <p className={'text-title text-lg font-semibold'}>{team.name}</p>
-                  <p className={'text-desc text-lg'}>{team.email}</p>
+                <div className={'flex flex-col md:flex-row md:gap-2 max-w-96 '}>
+                  <p className={'text-title text-lg font-semibold overflow-hidden whitespace-nowrap text-ellipsis'}>{team.name}</p>
+                  <p className={'text-desc text-lg overflow-hidden whitespace-nowrap text-ellipsis'}>{team.email}</p>
                 </div>
                 <DropDown
                   menu={{ items: items, selectable: true, key: team.id }}
@@ -74,5 +74,5 @@ export const TeamList = ({ data }) => {
         ))}
       </>
     )
-  else return <Spinner />
+  else if (data.isPending) return <Spinner />
 }
