@@ -74,7 +74,7 @@ export const TeamList = ({ data, pending }) => {
         ))}
       </>
     )
-  else if (pending) return <div className="w-screen h-screen flex items-center justify-center">
+  else if (pending) return <div className="w-full  flex items-center justify-center">
     <Spinner />
   </div>
   else return (<p>Данных нет</p>)
