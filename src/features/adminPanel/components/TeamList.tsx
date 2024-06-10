@@ -24,7 +24,7 @@ export const TeamList = ({ data, pending }) => {
     }
   }, [actionUser])
 
-  if (data)
+  if (data.length > 0)
     return (
       <>
         {data.map((team) => (
