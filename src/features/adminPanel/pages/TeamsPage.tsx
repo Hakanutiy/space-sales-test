@@ -11,7 +11,7 @@ import { useState, useEffect } from 'react'
 import { SideBar } from '@/features/adminPanel/components/SideBar'
 
 export const TeamsPage = () => {
-  const { data } = useGetTeams({ config: {} })
+  const { data, isPending } = useGetTeams({ config: {} })
   const [search, setSearch] = useState('')
   const [filteredData, setFilteredData] = useState([])
   const { setCurrentModal } = useUiStore()
@@ -53,7 +53,7 @@ export const TeamsPage = () => {
       <div className="w-full flex justify-center">
         <section className="bg-foreGround py-4 max-w-6xl rounded-2xl w-full">
           <main className="md:px-7 flex flex-col gap-10 pt-5">
-            <TeamList data={filteredData} />
+            <TeamList data={filteredData} pending={isPending} />
           </main>
           <MainModal modalId="createTeams">
             <CreateUserTeam />

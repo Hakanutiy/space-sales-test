@@ -1,7 +1,7 @@
 import { MoreIcon } from '@/assets/icons'
 import { Spinner } from '@/components/Elements/Spinner/Spinner'
 import { DropDown } from '@/features/adminPanel/components/DropDown'
-import { useEffect, useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import { useUiStore } from '@/stores/ui'
 import { MainModal } from '@/components/Elements/Modal'
 import { SendIvite } from '@/features/adminPanel/components/SendIvite'
@@ -13,7 +13,7 @@ const items = [
   { key: 2, label: 'Отправить код повторно', links: 'sendCodeTeam' },
   { key: 3, label: 'Удалить', links: 'deleteTeamUser' },
 ]
-export const TeamList = ({ data }) => {
+export const TeamList = ({ data, pending }) => {
   const [actionUser, setActionUser] = useState<{ label: string; key: string }[]>([])
   const { setCurrentModal } = useUiStore()
   const currentUser = data ? data.find((user) => user.id === actionUser[0]?.key) : null
@@ -74,6 +74,8 @@ export const TeamList = ({ data }) => {
         ))}
       </>
     )
-  else if (data.isPending) return <Spinner />
+  else if (pending) return <div className="w-screen h-screen flex items-center justify-center">
+    <Spinner />
+  </div>
   else return (<p>Данных нет</p>)
 }
