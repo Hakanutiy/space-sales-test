@@ -36,7 +36,7 @@ export const TeamList = ({ data, pending }) => {
             />
             <main className={'w-full flex flex-col justify-center'}>
               <div className={'flex justify-between items-center'}>
-                <div className={'flex flex-col md:flex-row md:gap-2 md:max-w-96 max-w-52 '}>
+                <div className={'flex flex-col md:flex-row md:gap-2 md:max-w-96 max-w-40 '}>
                   <p className={'text-title text-lg font-semibold overflow-hidden whitespace-nowrap text-ellipsis'}>{team.name}</p>
                   <p className={'text-desc text-lg overflow-hidden whitespace-nowrap text-ellipsis'}>{team.email}</p>
                 </div>
