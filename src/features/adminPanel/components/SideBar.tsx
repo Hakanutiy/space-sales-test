@@ -21,7 +21,7 @@ const links = [
   { Icon: TeamsIcon, to: '/teams', label: 'Команда' },
   { Icon: BlogIcon, to: '/blog', label: 'Блог' },
   { Icon: MoneyIcon, to: '/Money', label: 'Курс валют' },
-  { Icon: ExitIcon, to: '/Exit', label: 'Аналитика' },
+  { Icon: ExitIcon, to: '/Exit', label: 'Выход' },
 ]
 export const SideBar = () => {
   return (
